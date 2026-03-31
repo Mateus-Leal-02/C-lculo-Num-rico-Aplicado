@@ -50,6 +50,6 @@ pip install numpy matplotlib
 
 ## 👤 Autor
 
-**Mateus Leal** · Matrícula: XXXXXXXX  
-Engenharia — Universidade de Brasília  
+**Mateus Leal** · Matrícula: 221028134  
+Engenharia Mecânica — Universidade de Brasília  
 GitHub: [@Mateus-Leal-02](https://github.com/Mateus-Leal-02)
