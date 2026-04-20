@@ -16,7 +16,10 @@ Calculo-Numerico-Aplicado/
 │   ├── README.md
 │   └── rk4_sedimentation.py
 │
-├── PPC2-.../               ← em breve
+├── PPC2 - Método de Bairstow/
+│   ├── README.md
+│   └── Bairstow.py
+│
 ├── PPC3-.../               ← em breve
 │
 └── README.md               ← você está aqui
@@ -29,7 +32,7 @@ Calculo-Numerico-Aplicado/
 | # | Tema | Método | Status |
 |---|------|--------|--------|
 | [PPC1](./PPC1-Runge-Kutta/) | Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
-| PPC2 | — | — | 🔒 Em breve |
+| PPC2 | (./PPC2 - Método de Bairstow/) | - | ✅ Concluído |
 | PPC3 | — | — | 🔒 Em breve |
 
 ---
