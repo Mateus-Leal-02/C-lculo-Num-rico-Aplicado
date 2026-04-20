@@ -31,8 +31,8 @@ Calculo-Numerico-Aplicado/
 
 | # | Tema | Método | Status |
 |---|------|--------|--------|
-| [PPC1](./PPC1-Runge-Kutta/) | Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
-| PPC2 | (./PPC2 - Método de Bairstow/) | - | ✅ Concluído |
+| [PPC1](./PPC1-Runge-Kutta/)| Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
+| [PPC2](./PPC2 - Método de Bairstow/)| Raízes de Polinômios | Método de Bairstow | ✅ Concluído |
 | PPC3 | — | — | 🔒 Em breve |
 
 ---
