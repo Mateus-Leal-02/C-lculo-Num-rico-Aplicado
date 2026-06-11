@@ -40,6 +40,7 @@ Calculo-Numerico-Aplicado/
 | [PPC1](./PPC1-Runge-Kutta/)| Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
 | [PPC2](./PPC2-Método-de-Bairstow/)| Raízes de Polinômios | Método de Bairstow | ✅ Concluído |
 | [PPC3](./PPC3-Eliminacao-Gaussiana/) | Sistema de Equações | Eliminação Gaussiana | ✅ Concluído |
+| [PPC4](./PPC4-Otimizacao/) | Otimizações | Multidimensional | ✅ Concluído |
 
 ---
 
