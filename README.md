@@ -16,13 +16,19 @@ Calculo-Numerico-Aplicado/
 │   ├── README.md
 │   └── rk4_sedimentation.py
 │
-├── PPC2 - Método de Bairstow/
+├── PPC2-Método-de-Bairstow/
 │   ├── README.md
 │   └── Bairstow.py
 │
-├── PPC3-.../               ← em breve
+├── PPC3-Eliminacao-Gaussiana/
+│   ├── README.md
+│   └── Reator.py
 │
-└── README.md               ← você está aqui
+├── PPC4-Otimizacao/
+│   ├── README.md
+│   └── Otimizacao.py
+│
+└── README.md
 ```
 
 ---
@@ -33,7 +39,7 @@ Calculo-Numerico-Aplicado/
 |---|------|--------|--------|
 | [PPC1](./PPC1-Runge-Kutta/)| Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
 | [PPC2](./PPC2-Método-de-Bairstow/)| Raízes de Polinômios | Método de Bairstow | ✅ Concluído |
-| PPC3 | — | — | 🔒 Em breve |
+| [PPC3](./PPC3-Eliminacao-Gaussiana/) | Sistema de Equações | Eliminação Gaussiana | ✅ Concluído |
 
 ---
 
