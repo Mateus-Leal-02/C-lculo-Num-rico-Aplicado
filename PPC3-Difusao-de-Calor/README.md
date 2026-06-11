@@ -43,7 +43,7 @@ O esquema implícito foi usado porque é estável para passos de tempo maiores q
 
 | Arquivo | Descrição |
 |---|---|
-| `ppc3_reator_implicito.py` | Código principal do PPC3 |
+| `Reator.py` | Código principal do PPC3 |
 | `ppc3_perfis_transientes.dat` | Perfis de temperatura em diferentes tempos |
 | `ppc3_validacao_sem_geracao.dat` | Comparação entre solução numérica e solução analítica sem geração |
 | `ppc3_perfis_transientes.png` | Figura dos perfis transientes, gerada se `matplotlib` estiver instalado |
@@ -54,25 +54,25 @@ O esquema implícito foi usado porque é estável para passos de tempo maiores q
 Na pasta deste PPC:
 
 ```bash
-python ppc3_reator_implicito.py
+python Reator.py
 ```
 
 Para alterar a malha, o passo de tempo e o tempo final:
 
 ```bash
-python ppc3_reator_implicito.py --N 81 --dt 0.005 --t-final 20
+python Reator.py --N 81 --dt 0.005 --t-final 20
 ```
 
 Para executar sem gerar figuras:
 
 ```bash
-python ppc3_reator_implicito.py --sem-plots
+python Reator.py --sem-plots
 ```
 
 Para salvar os arquivos de saída em outra pasta:
 
 ```bash
-python ppc3_reator_implicito.py --outdir resultados
+python Reator.py --outdir resultados
 ```
 
 ## Dependências
