@@ -29,7 +29,8 @@ Calculo-Numerico-Aplicado/
 │   └── Otimizacao.py
 │
 ├── Resumo/
-│   ├── README.md
+│   ├── Exemplos.py
+│   └── REAME.md
 │   └── Resumo.py
 │
 └── README.md
