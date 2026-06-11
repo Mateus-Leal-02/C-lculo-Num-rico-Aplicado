@@ -24,7 +24,7 @@ a partir de um ponto inicial, usando dois métodos de otimização baseados em g
 
 | Arquivo | Descrição |
 |---|---|
-| `ppc4_otimizacao.py` | Código principal do PPC4 |
+| `Otimizacao.py` | Código principal do PPC4 |
 | `output1.dat` | Histórico iterativo do método do aclive máximo |
 | `output2.dat` | Histórico iterativo do método de Fletcher-Reeves |
 | `function.dat` | Malha de valores `x`, `y`, `f(x,y)` para curvas de nível |
@@ -35,7 +35,7 @@ a partir de um ponto inicial, usando dois métodos de otimização baseados em g
 Na pasta deste PPC:
 
 ```bash
-python ppc4_otimizacao.py
+python Otimizacao.py
 ```
 
 Por padrão, o código usa:
@@ -49,25 +49,25 @@ tol = 1e-8
 Para alterar o ponto inicial:
 
 ```bash
-python ppc4_otimizacao.py --x0 -2 --y0 3
+python Otimizacao.py --x0 -2 --y0 3
 ```
 
 Para alterar a tolerância e o número máximo de iterações:
 
 ```bash
-python ppc4_otimizacao.py --tol 1e-10 --max-iter 200
+python Otimizacao.py --tol 1e-10 --max-iter 200
 ```
 
 Para executar sem gerar figura:
 
 ```bash
-python ppc4_otimizacao.py --sem-plots
+python Otimizacao.py --sem-plots
 ```
 
 Para salvar os arquivos em outra pasta:
 
 ```bash
-python ppc4_otimizacao.py --outdir resultados
+python Otimizacao.py --outdir resultados
 ```
 
 ## Dependências
