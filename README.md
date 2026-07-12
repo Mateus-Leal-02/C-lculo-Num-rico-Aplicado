@@ -15,26 +15,33 @@ Calculo-Numerico-Aplicado/
 ├── PPC1-Runge-Kutta/
 │   ├── README.md
 │   └── rk4_sedimentation.py
+│   └── Resultado
+│
 │
 ├── PPC2-Método-de-Bairstow/
 │   ├── README.md
 │   └── Bairstow.py
+│   └── Resultado
 │
 ├── PPC3-Eliminacao-Gaussiana/
 │   ├── README.md
 │   └── Reator.py
+│   └── Resultado
 │
 ├── PPC4-Otimizacao/
 │   ├── README.md
 │   └── Otimizacao.py
+│   └── Resultado
 │
 ├── PPC5-Blasius
 │   ├── Blasius.py
 │   └── REAME.md
+│   └── Resultado
 │
 ├── PPC6-Liebmann
 │   ├── Liebmann.py
 │   └── REAME.md
+│   └── Resultado
 │
 └── README.md
 ```
