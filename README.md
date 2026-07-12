@@ -1,142 +1,76 @@
-# 🔢 Cálculo Numérico Aplicado
+# 📐 Cálculo Numérico Aplicado
 
 > Universidade de Brasília — Faculdade de Tecnologia  
-> Disciplina: Cálculo Numérico Aplicado — 2026/1  
-> Professor: Prof. Dr. Rafael Gabler Gontijo  
-> Autor: Mateus Leal Silva
+> Prof. Dr. Rafael Gabler Gontijo · 2026/1
 
-Repositório didático com implementações computacionais desenvolvidas ao longo da disciplina de **Cálculo Numérico Aplicado**. Cada Programa para Casa (PPC) combina modelagem matemática, implementação do algoritmo, validação numérica, documentação, exercício resolvido e um desafio de extensão.
-
-O objetivo não é apenas apresentar resultados finais, mas manter os métodos como **caixas transparentes**: as etapas numéricas são implementadas explicitamente e comentadas para permitir auditoria, estudo e reprodução.
+Repositório com as implementações computacionais desenvolvidas ao longo da disciplina de **Cálculo Numérico Aplicado**. Cada programa para casa (PPC) está organizado em sua própria pasta, com código comentado e documentação independente.
 
 ---
 
-## 🧭 Projetos disponíveis
+## 📂 Estrutura do repositório
 
-| Projeto | Aplicação | Métodos principais | Acesso |
-|---|---|---|---|
-| PPC1 | Sedimentação de uma partícula esférica | Runge–Kutta de 4ª ordem | [Abrir PPC1](PPC1-Runge-Kutta/) |
-| PPC2 | Raízes de polinômios e autovalores | Método de Bairstow | [Abrir PPC2](PPC2-Método-de-Bairstow/) |
-| PPC3 | Difusão de calor transiente em pastilha de UO₂ | Diferenças finitas, esquema implícito e TDMA | [Abrir PPC3](PPC3-Eliminacao-Gaussiana/) |
-| PPC4 | Maximização bidimensional sem restrições | Aclive máximo e Fletcher–Reeves | [Abrir PPC4](PPC4-Otimizacao/) |
-| PPC5 | Camada limite laminar de Blasius | Método do Tiro, Newton–Raphson e RK4 | [Abrir PPC5](PPC5-Blasius/) |
-| PPC6 | Condução 2D em aleta retangular | Diferenças finitas, Gauss, Liebmann e SOR | [Abrir PPC6](PPC6-Liebmann/) |
-
----
-
-## 📁 Organização
-
-```text
-C-lculo-Num-rico-Aplicado/
-├── README.md
-├── requirements.txt
-├── docs/
-│   ├── roteiro-de-estudos.md
-│   ├── erros-numericos.md
-│   ├── criterios-de-convergencia.md
-│   ├── glossario.md
-│   └── privacidade-e-direitos-autorais.md
+```
+Calculo-Numerico-Aplicado/
+│
 ├── PPC1-Runge-Kutta/
 │   ├── README.md
-│   ├── rk4_sedimentation.py
-│   ├── docs/
-│   ├── exercicios/
-│   ├── inputs/
-│   └── resultados/
+│   └── rk4_sedimentation.py
+│
 ├── PPC2-Método-de-Bairstow/
+│   ├── README.md
+│   └── Bairstow.py
+│
 ├── PPC3-Eliminacao-Gaussiana/
+│   ├── README.md
+│   └── Reator.py
+│
 ├── PPC4-Otimizacao/
-├── PPC5-Blasius/
-└── PPC6-Liebmann/
-```
-
-Em cada PPC:
-
-- `README.md`: formulação, método, entradas, saídas, execução e validação;
-- arquivo `.py`: implementação principal;
-- `docs/`: relatórios APC/PPC e orientações de documentação;
-- `exercicios/`: desenvolvimento manual de um exemplo autoral;
-- `desafio.md`: extensão proposta ao leitor;
-- `inputs/`: parâmetros ou dados de entrada, quando aplicável;
-- `resultados/`: arquivos e gráficos gerados pela execução.
-
----
-
-## 🚀 Preparação do ambiente
-
-### 1. Clonar o repositório
-
-```bash
-git clone https://github.com/Mateus-Leal-02/C-lculo-Num-rico-Aplicado.git
-cd C-lculo-Num-rico-Aplicado
-```
-
-### 2. Criar um ambiente virtual
-
-No Windows:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-```
-
-No Linux ou WSL:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 3. Instalar as dependências
-
-```bash
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+│   ├── README.md
+│   └── Otimizacao.py
+│
+├── PPC5-Blasius
+│   ├── Blasius.py
+│   └── REAME.md
+│
+├── PPC6-Liebmann
+│   ├── Liebmann.py
+│   └── REAME.md
+│
+└── README.md
 ```
 
 ---
 
-## ▶️ Execução rápida
+## 📋 Programas para Casa
 
-Entre na pasta do projeto desejado e execute o código principal. Exemplo:
+| # | Tema | Método | Status |
+|---|------|--------|--------|
+| [PPC1](./PPC1-Runge-Kutta/)| Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
+| [PPC2](./PPC2-Método-de-Bairstow/)| Raízes de Polinômios | Método de Bairstow | ✅ Concluído |
+| [PPC3](./PPC3-Eliminacao-Gaussiana/) | Sistema de Equações | Eliminação Gaussiana | ✅ Concluído |
+| [PPC4](./PPC4-Otimizacao/) | Otimizações | Multidimensional | ✅ Concluído |
+| [PPC5](/PPC5-Blasius/) | Equação de Blasius| Método do Tiro | ✅ Concluído |
+| [PPC6](/PPC6-Liebmann/) | Liebmann com Relaxação| Método Liebman | ✅ Concluído |
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **Python 3.8+**
+- `numpy` — operações numéricas e vetorização
+- `matplotlib` — geração de gráficos e análises visuais
+
+Instale as dependências com:
 
 ```bash
-cd PPC5-Blasius
-python Blasius.py
+pip install numpy matplotlib
 ```
 
-Para consultar os argumentos disponíveis em códigos com interface de linha de comando:
-
-```bash
-python NomeDoCodigo.py --help
-```
-
-As instruções específicas, parâmetros padrão e arquivos de saída estão documentados no `README.md` de cada PPC.
-
 ---
 
-## ✅ Estratégia de validação
+## 👤 Autor
 
-As implementações são verificadas por uma ou mais das seguintes abordagens:
+**Mateus Leal** · Matrícula: 221028134  
+Engenharia Mecânica — Universidade de Brasília  
+GitHub: [@Mateus-Leal-02](https://github.com/Mateus-Leal-02)
 
-1. comparação com solução analítica conhecida;
-2. comparação com ponto ótimo, raízes ou coeficientes de referência;
-3. estudo de refinamento de passo ou malha;
-4. análise do resíduo e do critério de convergência;
-5. comparação entre métodos independentes;
-6. verificação de comportamento físico esperado.
-
-Consulte [`docs/criterios-de-convergencia.md`](docs/criterios-de-convergencia.md) e [`docs/erros-numericos.md`](docs/erros-numericos.md).
-
----
-
-## 🧩 Exercícios e desafios
-
-Cada pasta contém:
-
-- um **exercício resolvido**, destinado a reproduzir manualmente uma etapa central do método;
-- um **desafio para o leitor**, destinado a ampliar o código, comparar algoritmos ou avaliar sensibilidade numérica.
-
-Esses materiais são autorais e complementares aos relatórios da disciplina.
-
----
