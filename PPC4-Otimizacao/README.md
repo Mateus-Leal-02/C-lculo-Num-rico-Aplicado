@@ -1,90 +1,125 @@
 # PPC4 — Otimização Bidimensional sem Restrições
 
-## Problema
+Este diretório contém a implementação computacional do **PPC4 de Cálculo Numérico Aplicado**.
 
-Maximizar:
+O problema consiste em maximizar a função bidimensional:
 
 ```math
 f(x,y)=2xy+2x-x^2-2y^2
 ```
 
-partindo de:
-
-```math
-(x_0,y_0)=(-2,3).
-```
-
-O ótimo analítico é:
-
-```math
-(x^*,y^*)=(2,1),\qquad f^*=2.
-```
+a partir de um ponto inicial, usando dois métodos de otimização baseados em gradiente.
 
 ## Métodos implementados
 
-### Aclive máximo
+1. **Aclive máximo**
+   - usa a direção do gradiente como direção de busca;
+   - em cada iteração, calcula o melhor passo na direção escolhida.
 
-Usa a direção do gradiente e realiza uma linha de busca a cada iteração.
-
-### Gradientes conjugados de Fletcher–Reeves
-
-Combina o gradiente atual com a direção anterior:
-
-```math
-\beta_k=\frac{g_{k+1}^Tg_{k+1}}{g_k^Tg_k}.
-```
+2. **Gradientes conjugados de Fletcher-Reeves**
+   - combina o gradiente atual com a direção anterior;
+   - tende a convergir em menos iterações para funções quadráticas.
 
 ## Arquivos
 
 | Arquivo | Descrição |
 |---|---|
-| `Otimizacao.py` | código principal existente |
-| `docs/APC4.pdf` | desenvolvimento manual do aclive máximo |
-| `docs/PPC4.pdf` | relatório dos dois métodos |
-| `exercicios/exercicio-resolvido.md` | duas iterações do aclive máximo |
-| `desafio.md` | aplicação a uma função não quadrática |
-
-## Dependências
-
-```bash
-pip install numpy matplotlib
-```
+| `Otimizacao.py` | Código principal do PPC4 |
+| `output1.dat` | Histórico iterativo do método do aclive máximo |
+| `output2.dat` | Histórico iterativo do método de Fletcher-Reeves |
+| `function.dat` | Malha de valores `x`, `y`, `f(x,y)` para curvas de nível |
+| `ppc4_caminhos.png` | Figura dos caminhos iterativos, gerada se `matplotlib` estiver instalado |
 
 ## Como executar
+
+Na pasta deste PPC:
 
 ```bash
 python Otimizacao.py
 ```
 
-Com outro ponto inicial:
+Por padrão, o código usa:
 
-```bash
-python Otimizacao.py --x0 -1 --y0 4
+```text
+x0 = -2
+y0 = 3
+tol = 1e-8
 ```
 
-## Arquivos de saída
+Para alterar o ponto inicial:
 
-- `output1.dat`: histórico do aclive máximo;
-- `output2.dat`: histórico de Fletcher–Reeves;
-- `function.dat`: malha da função;
-- `ppc4_caminhos.png`: trajetórias sobre curvas de nível.
+```bash
+python Otimizacao.py --x0 -2 --y0 3
+```
 
-## Validação
+Para alterar a tolerância e o número máximo de iterações:
 
-- norma do gradiente próxima de zero;
-- valor final próximo de `2`;
-- coordenadas próximas de `(2,1)`;
-- Hessiana negativa definida, confirmando máximo estrito.
+```bash
+python Otimizacao.py --tol 1e-10 --max-iter 200
+```
 
-## Limitações
+Para executar sem gerar figura:
 
-- a linha de busca atual explora a estrutura quadrática específica;
-- gradientes conjugados não lineares podem exigir reinicialização;
-- tolerância muito rígida pode ser incompatível com a precisão numérica.
+```bash
+python Otimizacao.py --sem-plots
+```
 
-## Material complementar
+Para salvar os arquivos em outra pasta:
 
-- [Exercício resolvido](exercicios/exercicio-resolvido.md)
-- [Desafio](desafio.md)
-- [APC4](docs/APC4.pdf)
-- [PPC4](docs/PPC4.pdf)
+```bash
+python Otimizacao.py --outdir resultados
+```
+
+## Dependências
+
+Obrigatória:
+
+```bash
+pip install numpy
+```
+
+Opcional para geração de gráficos:
+
+```bash
+pip install matplotlib
+```
+
+## Formato dos arquivos `.dat`
+
+Os arquivos `output1.dat` e `output2.dat` seguem o formato:
+
+```text
+iter erro h x y dfdx dfdy f
+```
+
+onde:
+
+- `iter` é o número da iteração;
+- `erro` é a norma do gradiente;
+- `h` é o passo ótimo na direção de busca;
+- `x` e `y` são as coordenadas do ponto atual;
+- `dfdx` e `dfdy` são as componentes do gradiente;
+- `f` é o valor da função objetivo.
+
+O arquivo `function.dat` segue o formato:
+
+```text
+x y f
+```
+
+## Resultado esperado
+
+O ponto ótimo analítico é:
+
+```math
+(x^*,y^*)=(2,1)
+```
+
+com:
+
+```math
+f(x^*,y^*)=2
+```
+
+O método de Fletcher-Reeves converge rapidamente para esse ponto por se tratar de uma função quadrática côncava.
+
