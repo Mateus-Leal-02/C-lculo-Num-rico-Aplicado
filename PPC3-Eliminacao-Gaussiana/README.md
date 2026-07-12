@@ -1,94 +1,106 @@
 # PPC3 — Difusão de Calor Transiente em Pastilha de UO₂
 
-> A pasta mantém o nome histórico `PPC3-Eliminacao-Gaussiana`, mas o método principal implementado é o **Algoritmo de Thomas (TDMA)** para sistemas tridiagonais.
+Este diretório contém a implementação computacional do **PPC3 de Cálculo Numérico Aplicado**.
 
-## Problema físico
+O problema resolvido é a condução de calor unidimensional transiente em uma placa plana simétrica, representando uma idealização da meia-espessura de uma pastilha combustível de dióxido de urânio (`UO₂`) submetida a geração volumétrica interna e resfriamento convectivo na superfície.
 
-O programa modela a condução de calor unidimensional transiente em uma placa plana simétrica, representando a meia-espessura de uma pastilha combustível de dióxido de urânio com geração volumétrica e convecção na superfície.
+## Modelo físico
+
+A equação governante é:
 
 ```math
-\rho C_p\frac{\partial T}{\partial t}
-=k\frac{\partial^2T}{\partial x^2}+\dot q.
+\rho C_p \frac{\partial T}{\partial t}
+=
+k \frac{\partial^2 T}{\partial x^2}
++
+\dot{q}
 ```
 
-Condições:
+com as condições de contorno:
 
 ```math
 \left.\frac{\partial T}{\partial x}\right|_{x=0}=0
 ```
 
 ```math
--k\left.\frac{\partial T}{\partial x}\right|_{x=L}=h(T_L-T_\infty).
+-k\left.\frac{\partial T}{\partial x}\right|_{x=L}
+=
+h(T_L-T_\infty)
 ```
 
 ## Método numérico
 
+A solução usa:
+
 - diferenças finitas no espaço;
-- esquema totalmente implícito no tempo;
-- tratamento específico dos nós de simetria e convecção;
-- solução do sistema tridiagonal pelo TDMA.
+- esquema implícito no tempo;
+- montagem de um sistema tridiagonal;
+- solução do sistema pelo Algoritmo de Thomas, também chamado de TDMA.
+
+O esquema implícito foi usado porque é estável para passos de tempo maiores que os normalmente permitidos em formulações explícitas.
 
 ## Arquivos
 
 | Arquivo | Descrição |
 |---|---|
-| `Reator.py` | código principal existente |
-| `docs/APC3.pdf` | exercícios analíticos de sistemas lineares |
-| `docs/PPC3.pdf` | relatório do modelo transiente |
-| `exercicios/exercicio-resolvido.md` | solução manual de um sistema pelo TDMA |
-| `desafio.md` | implementação de Crank–Nicolson |
-
-## Dependências
-
-```bash
-pip install numpy matplotlib
-```
+| `Reator.py` | Código principal do PPC3 |
+| `ppc3_perfis_transientes.dat` | Perfis de temperatura em diferentes tempos |
+| `ppc3_validacao_sem_geracao.dat` | Comparação entre solução numérica e solução analítica sem geração |
+| `ppc3_perfis_transientes.png` | Figura dos perfis transientes, gerada se `matplotlib` estiver instalado |
+| `ppc3_validacao.png` | Figura de validação, gerada se `matplotlib` estiver instalado |
 
 ## Como executar
+
+Na pasta deste PPC:
 
 ```bash
 python Reator.py
 ```
 
-Exemplo com parâmetros numéricos:
+Para alterar a malha, o passo de tempo e o tempo final:
 
 ```bash
 python Reator.py --N 81 --dt 0.005 --t-final 20
 ```
 
-Sem figuras:
+Para executar sem gerar figuras:
 
 ```bash
 python Reator.py --sem-plots
 ```
 
-## Parâmetros físicos usados no caso padrão
+Para salvar os arquivos de saída em outra pasta:
+
+```bash
+python Reator.py --outdir resultados
+```
+
+## Dependências
+
+Obrigatória:
+
+```bash
+pip install numpy
+```
+
+Opcional para geração de gráficos:
+
+```bash
+pip install matplotlib
+```
+
+## Parâmetros adotados
 
 | Parâmetro | Valor | Unidade |
 |---|---:|---|
-| `L` | `5,0e-3` | m |
-| `k` | `4,0` | W/(m·K) |
-| `rho` | `10500` | kg/m³ |
-| `Cp` | `300` | J/(kg·K) |
-| `h` | `30000` | W/(m²·K) |
-| `T_inf` | `300` | °C |
-| `q_dot` | `3,0e8` | W/m³ |
+| `L` | `5.0e-3` | m |
+| `k` | `4.0` | W/(m·K) |
+| `rho` | `10500.0` | kg/m³ |
+| `Cp` | `300.0` | J/(kg·K) |
+| `h` | `30000.0` | W/(m²·K) |
+| `T_inf` | `300.0` | °C |
+| `q_dot` | `3.0e8` | W/m³ |
 
-## Validação
+## Resultado esperado
 
-No caso sem geração interna, o resultado numérico é comparado com a solução em série para parede plana com simetria e convecção. No caso com geração, o perfil deve tender à solução parabólica permanente.
-
-## Fontes de erro
-
-- discretização espacial;
-- discretização temporal;
-- truncamento da série analítica;
-- representação unidimensional;
-- propriedades constantes.
-
-## Material complementar
-
-- [Exercício resolvido](exercicios/exercicio-resolvido.md)
-- [Desafio](desafio.md)
-- [APC3](docs/APC3.pdf)
-- [PPC3](docs/PPC3.pdf)
+O programa calcula o aquecimento transiente da pastilha e compara o resultado numérico, no caso sem geração interna, com a solução analítica por série. No caso com geração, o perfil tende ao regime permanente parabólico esperado para condução unidimensional com geração volumétrica.
