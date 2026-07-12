@@ -32,7 +32,7 @@ Calculo-Numerico-Aplicado/
 │   ├── Blasius.py
 │   └── REAME.md
 │
-├── PPC6-Laplace
+├── PPC6-Liebmann
 │   ├──Laplace.py
 │   └── REAME.md
 │
