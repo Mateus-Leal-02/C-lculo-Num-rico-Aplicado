@@ -1,0 +1,21 @@
+Resumo do PPC6 - Aleta retangular
+=================================
+
+L = 0.12 m
+H = 0.02 m
+k = 205 W/(m.K)
+h = 25 W/(m2.K)
+T_b = 100 graus C
+T_inf = 25 graus C
+nx = 21, ny = 9
+tolerancia = 1.000e-08
+omega = 1.6
+
+Resultados dos metodos
+----------------------
+Gauss: tempo = 4.523430e-01 s
+Liebmann: iteracoes = 11012, erro = 9.996456e-09, tempo = 2.133027e+01 s, convergiu = True
+SOR: iteracoes = 3097, erro = 9.964059e-09, tempo = 6.038959e+00 s, convergiu = True
+Diferenca maxima Gauss x Liebmann = 1.011339e-03 graus C
+Diferenca maxima Gauss x SOR = 2.507037e-04 graus C
+Erro percentual medio da linha central = 2.183255e-02%
