@@ -23,7 +23,7 @@ Calculo-Numerico-Aplicado/
 │   └── Bairstow.py
 │   └── Resultado
 │
-├── PPC3-Eliminacao-Gaussiana/
+├── PPC3-Difusao-Calor-TDMA/
 │   ├── README.md
 │   └── Reator.py
 │   └── Resultado
@@ -54,7 +54,7 @@ Calculo-Numerico-Aplicado/
 |---|------|--------|--------|
 | [PPC1](./PPC1-Runge-Kutta/)| Sedimentação de esfera em baixo Reynolds | Runge-Kutta 4ª ordem | ✅ Concluído |
 | [PPC2](./PPC2-Método-de-Bairstow/)| Raízes de Polinômios | Método de Bairstow | ✅ Concluído |
-| [PPC3](./PPC3-Eliminacao-Gaussiana/) | Sistema de Equações | Eliminação Gaussiana | ✅ Concluído |
+| [PPC3](./PPC3-Difusao-Calor-TDMA/) | Sistema de Equações | Eliminação Gaussiana | ✅ Concluído |
 | [PPC4](./PPC4-Otimizacao/) | Otimizações | Multidimensional | ✅ Concluído |
 | [PPC5](/PPC5-Blasius/) | Equação de Blasius| Método do Tiro | ✅ Concluído |
 | [PPC6](/PPC6-Liebmann/) | Liebmann com Relaxação| Método Liebman | ✅ Concluído |
