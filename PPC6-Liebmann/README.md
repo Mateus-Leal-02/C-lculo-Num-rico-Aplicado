@@ -243,3 +243,4 @@ O método direto de Gauss fornece uma solução de referência para a malha mont
 
 Para problemas maiores, a matriz de coeficientes se torna esparsa. O código monta a matriz densa apenas para fins didáticos e para mostrar claramente a relação entre diferenças finitas e sistema linear. Em aplicações reais de maior porte, seria mais eficiente usar armazenamento esparso.
 
+
