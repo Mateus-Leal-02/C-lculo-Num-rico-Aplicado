@@ -33,7 +33,7 @@ Calculo-Numerico-Aplicado/
 │   └── REAME.md
 │
 ├── PPC6-Liebmann
-│   ├──Laplace.py
+│   ├── Liebmann.py
 │   └── REAME.md
 │
 └── README.md
