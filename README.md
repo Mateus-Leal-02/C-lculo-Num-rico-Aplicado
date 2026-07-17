@@ -86,7 +86,8 @@ pip install numpy matplotlib
 
 ## Referência principal
 
-CHAPRA, Steven C.; CANALE, Raymond P. **Métodos Numéricos para Engenharia**. 5. ed. São Paulo: McGraw-Hill, 2008.
+CHAPRA, Steven C.; CANALE, Raymond P. **Métodos Numéricos para Engenharia**. 5. ed. São Paulo: MCGraw-Hill, 2008.
+
 ---
 
 ## Referências específicas indicadas
@@ -96,6 +97,7 @@ BAIRSTOW, Leonard. **Applied Aerodynamics**. London: Longmans, Green and Co., 19
 BLASIUS, Heinrich. Grenzschichten in Flüssigkeiten mit kleiner Reibung. *Zeitschrift für Mathematik und Physik*, v. 56, p. 1–37, 1908.
 
 FLETCHER, Roger; REEVES, Colin M. Function minimization by conjugate gradients. *The Computer Journal*, v. 7, n. 2, p. 149–154, 1964.
+
 ---
 
 ## Como citar este repositório
