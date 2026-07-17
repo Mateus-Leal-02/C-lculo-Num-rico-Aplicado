@@ -50,7 +50,7 @@ Calculo-Numerico-Aplicado/
 │   └── Resultado
 │
 └── Referência
-│   ├── Métodos Numéricos para Engenharia
+│   ├── CHAPRA, Steven C.; CANALE, Raymond P. **Métodos Numéricos para Engenharia**. 5. ed. São Paulo: MCGraw-Hill, 2008.
 └── gitgnore
 └── LICENSE
 └── README.md
