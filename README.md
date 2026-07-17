@@ -98,6 +98,10 @@ BLASIUS, Heinrich. Grenzschichten in Flüssigkeiten mit kleiner Reibung. *Zeitsc
 
 FLETCHER, Roger; REEVES, Colin M. Function minimization by conjugate gradients. *The Computer Journal*, v. 7, n. 2, p. 149–154, 1964.
 
+Canal Youtube, [Ciência e Brisa](https://www.youtube.com/@Ci%C3%AAnciaebrisa), [Dr.Rafael Gabler Gontijo](www.rafaelgabler.com.br).
+
+Plataforma, [L2C](https://l2c.dev.br/sobre-nos/).
+
 ---
 
 ## Como citar este repositório
