@@ -89,7 +89,7 @@ pip install numpy matplotlib
 CHAPRA, Steven C.; CANALE, Raymond P. **Métodos Numéricos para Engenharia**. 5. ed. São Paulo: McGraw-Hill, 2008.
 ---
 
-## Referências específicas
+## Referências específicas indicadas
 
 BAIRSTOW, Leonard. **Applied Aerodynamics**. London: Longmans, Green and Co., 1920.
 
