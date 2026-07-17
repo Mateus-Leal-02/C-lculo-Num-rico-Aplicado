@@ -13,36 +13,46 @@ Repositório com as implementações computacionais desenvolvidas ao longo da di
 Calculo-Numerico-Aplicado/
 │
 ├── PPC1-Runge-Kutta/
-│   ├── README.md
+│   ├── APC e PPC
+│   └── README.md
 │   └── rk4_sedimentation.py
 │   └── Resultado
 │
 │
 ├── PPC2-Método-de-Bairstow/
-│   ├── README.md
+│   ├── APC e PPC
+│   └── README.md
 │   └── Bairstow.py
 │   └── Resultado
 │
 ├── PPC3-Difusao-Calor-TDMA/
-│   ├── README.md
+│   ├── APC e PPC
+│   └── README.md
 │   └── Reator.py
 │   └── Resultado
 │
 ├── PPC4-Otimizacao/
-│   ├── README.md
+│   ├── APC e PPC
+│   └── README.md
 │   └── Otimizacao.py
 │   └── Resultado
 │
 ├── PPC5-Blasius
-│   ├── Blasius.py
-│   └── REAME.md
+│   ├── APC e PPC
+│   └── README.md
+│   └── Blasius.py
 │   └── Resultado
 │
 ├── PPC6-Liebmann
-│   ├── Liebmann.py
-│   └── REAME.md
+│   ├── APC e PPC
+│   └── README.md
+│   └── Liebmann.py
 │   └── Resultado
 │
+└── Referência
+│   ├── Métodos Numéricos para Engenharia
+└── gitgnore
+└── LICENSE
 └── README.md
 ```
 
