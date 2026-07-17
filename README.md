@@ -61,7 +61,7 @@ Calculo-Numerico-Aplicado/
 ## 📋 Programas para Casa
 
 | # | Descrição | Status |
-|---|------|--------|--------|
+|---|--------------|--------|
 | [PPC1](./PPC1-Runge-Kutta/)| Problemas de valor inicial e métodos de Runge–Kutta | ✅ Concluído |
 | [PPC2](./PPC2-Método-de-Bairstow/)| Raízes de polinômios e método de Bairstow | ✅ Concluído |
 | [PPC3](./PPC3-Difusao-Calor-TDMA/) | Sistemas tridiagonais, diferenças finitas e equações parabólicas | ✅ Concluído |
